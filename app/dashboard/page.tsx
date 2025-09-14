@@ -12,7 +12,7 @@ export default async function DashboardPage() {
   }
 
   const userRSVPsRes = await fetch(
-    "http://localhost:3000/api/dashboard/rsvps",
+    `${process.env.NEXT_PUBLIC_APP_URL}/api/dashboard/rsvps`,
     {
       next: { tags: ["rsvps"] },
     }
@@ -23,7 +23,7 @@ export default async function DashboardPage() {
     : [];
 
   const userEventsRes = await fetch(
-    "http://localhost:3000/api/dashboard/events",
+    `${process.env.NEXT_PUBLIC_APP_URL}/api/dashboard/events`,
     {
       next: { tags: ["events"] },
     }
