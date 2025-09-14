@@ -22,6 +22,7 @@ export async function GET() {
 
     return NextResponse.json(userRSVPs);
   } catch (err) {
+    console.error(err);
     return NextResponse.json(
       { error: "Failed to fetch rsvps" },
       { status: 500 }

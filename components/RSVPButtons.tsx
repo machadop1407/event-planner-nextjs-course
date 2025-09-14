@@ -68,18 +68,21 @@ export default function RSVPButtons({
       </h3>
       <div className="flex flex-wrap gap-3">
         <button
+          disabled={isLoading}
           className={getButtonClass("GOING")}
           onClick={() => handleRSVP("GOING")}
         >
           Going
         </button>
         <button
+          disabled={isLoading}
           className={getButtonClass("MAYBE")}
           onClick={() => handleRSVP("MAYBE")}
         >
           Maybe
         </button>
         <button
+          disabled={isLoading}
           className={getButtonClass("NOT_GOING")}
           onClick={() => handleRSVP("NOT_GOING")}
         >

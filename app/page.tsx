@@ -13,7 +13,7 @@ export default async function HomePage() {
         </h1>
         <p className="text-xl text-muted mb-8 max-w-2xl mx-auto">
           Create, manage, and join amazing events. From meetups to conferences,
-          we've got everything you need to make your event a success.
+          we&apos;ve got everything you need to make your event a success.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           {session ? (

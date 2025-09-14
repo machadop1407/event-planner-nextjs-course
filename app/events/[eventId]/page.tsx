@@ -2,7 +2,7 @@ import { auth } from "@/auth";
 import EventActions from "@/components/EventActions";
 import RSVPButtons from "@/components/RSVPButtons";
 import { Event, RSVPStatus } from "@/lib/models";
-import { format, isPast } from "date-fns";
+import { format } from "date-fns";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -55,7 +55,7 @@ export default async function EventPage({
             <p className="text-xl text-muted mb-6">{event.description}</p>
           </div>
 
-          {isOwner && <EventActions eventId={event.id} isOwner={isOwner} />}
+          {isOwner && <EventActions eventId={event.id} />}
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">

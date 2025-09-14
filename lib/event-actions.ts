@@ -3,7 +3,6 @@
 import { auth } from "@/auth";
 import { z } from "zod";
 import { prisma } from "./prisma";
-import { success } from "zod/v4";
 import { revalidateTag } from "next/cache";
 import { RSVPStatus } from "./models";
 
@@ -16,6 +15,7 @@ const eventSchema = z.object({
   isPublic: z.string().optional(),
 });
 
+// eslint-disable-next-line
 export async function createEvent(_: any, formData: FormData) {
   try {
     const session = await auth();

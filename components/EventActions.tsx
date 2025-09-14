@@ -6,10 +6,9 @@ import { useState } from "react";
 
 interface EventActionProps {
   eventId: string;
-  isOwner: boolean;
 }
 
-export default function EventActions({ eventId, isOwner }: EventActionProps) {
+export default function EventActions({ eventId }: EventActionProps) {
   const router = useRouter();
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
 
@@ -31,6 +30,7 @@ export default function EventActions({ eventId, isOwner }: EventActionProps) {
         alert("Failed to delete event: " + result.error);
       }
     } catch (err) {
+      console.error(err);
       alert("An error occured while deleting the event");
     } finally {
       setIsDeleting(false);

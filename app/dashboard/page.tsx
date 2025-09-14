@@ -1,7 +1,6 @@
 import { auth } from "@/auth";
-import { Event, EventRSVP, RSVPStatus } from "@/lib/models";
+import { Event, EventRSVP } from "@/lib/models";
 import { format } from "date-fns";
-import { headers } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
@@ -152,7 +151,10 @@ export default async function DashboardPage() {
           </div>
         ) : (
           <div className="card p-8 text-center">
-            <p className="text-muted"> You haven't created any events yet.</p>
+            <p className="text-muted">
+              {" "}
+              You haven&apos;t created any events yet.
+            </p>
           </div>
         )}
       </div>
@@ -228,7 +230,10 @@ export default async function DashboardPage() {
           </div>
         ) : (
           <div className="card p-8 text-center">
-            <p className="text-muted"> You haven't RSVP'd to any events yet.</p>
+            <p className="text-muted">
+              {" "}
+              You haven&apos;t RSVP&apos;d to any events yet.
+            </p>
           </div>
         )}
       </div>

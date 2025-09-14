@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
     const search = searchParams.get("search");
     const filter = searchParams.get("filter");
 
-    const where: any = {};
+    const where: any = {}; // eslint-disable-line
 
     if (search) {
       where.OR = [
@@ -30,6 +30,7 @@ export async function GET(request: NextRequest) {
     });
     return NextResponse.json(events);
   } catch (err) {
+    console.error(err);
     return NextResponse.json(
       { error: "Failed to fetch events" },
       { status: 500 }
